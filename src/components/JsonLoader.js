@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import styles from './JsonLoader.module.css';
+import Table from "./Table";
 
 function JsonLoader(){
-    const [data, setData] = useState('');
+    const [data, setData] = useState([]);
 
     const handleLoadJson = (e) => {
         fetch("DATA.json")
@@ -17,6 +18,9 @@ function JsonLoader(){
     return(
         <div>
             <button  onClick={() => handleLoadJson()}>Загрузить данные</button>
+            <Table
+            data={data}
+            />
         </div>
     )
 
