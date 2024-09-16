@@ -8,7 +8,7 @@
 	text-align: left;
 	border: none;
 	padding: 10px 15px;
-	background: #d8d8d8;
+	/* background: #d8d8d8; */
 	font-size: 14px;
 }
 .table thead tr th:first-child {
@@ -24,7 +24,7 @@
 	font-size: 14px;
 	vertical-align: top;
 }
-.table tbody tr:nth-child(even){
+.table tbody tr:nth-child(odd){
 	background: #f3f3f3;
 }
 .table tbody tr td:first-child {
