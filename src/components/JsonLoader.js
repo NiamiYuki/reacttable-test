@@ -10,9 +10,13 @@ function JsonLoader(){
         .then((responce) => responce.json())
         .then((data) => {
             setData(data)
-            console.log(data);
         });
         
+    }
+
+    const updateData= (rowID, value, col) =>{
+        data[rowID][col] = value;
+        setData([...data]);
     }
 
     return(
@@ -20,6 +24,7 @@ function JsonLoader(){
             <button  onClick={() => handleLoadJson()}>Загрузить данные</button>
             <Table
             data={data}
+            updateData = {updateData}
             />
         </div>
     )
